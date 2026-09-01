@@ -3,9 +3,9 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 'bold',
-        color: '#29aa05',
+        color: '#00c086',
     }
 });
 
