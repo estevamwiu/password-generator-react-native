@@ -2,35 +2,40 @@ import { useState } from 'react';
 import { View, Pressable, Text } from 'react-native';
 import { styles } from './ButtonPassStyles';
 import { TextInputPass } from '../TextInputPass/TexInputPass';
+import generatePass from '../../services/PasswordServices';
+
+import * as Clipboard from 'expo-clipboard';
 
 export function ButtonPass () {
     
     const [password, setPassword] = useState('');
 
     function handleGenButton () {
-        let generateToken = setPassword  ('Teste input senha');
-        console.log(generateToken);
+        let passwordFinish = generatePass();
+        setPassword (passwordFinish);
+    }
+
+    function handleCopyButton () {
+        Clipboard.setStringAsync(password);
     }
 
     return (
         <View>
-            <TextInputPass/>
+            <TextInputPass pass={password} />
             
             <Pressable 
                 style={styles.button}
                 onPress={handleGenButton}>
                 <Text style={styles.text}>
-                    🔑 Gerar Senha 🔑
+                    🔑 Generate your password 🔑
                 </Text>
             </Pressable>
             
             <Pressable 
                 style={styles.button}
-                onPress={() => {
-                console.log('Copy button pressed');
-                }}>
+                onPress={() => handleCopyButton()}>
                 <Text style={styles.text}>
-                    🗒️ Copiar 🗒️
+                    🗒️ Copy to clipboard 🗒️
                 </Text>
             </Pressable>
         </View>
