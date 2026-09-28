@@ -13,8 +13,6 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: 'column',
-    borderColor: 'yellow',
-    borderWidth: 2,
     justifyContent: 'center',
     alignSelf: 'center',
     marginBottom: 30,
