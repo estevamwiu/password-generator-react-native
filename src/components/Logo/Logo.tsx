@@ -7,7 +7,7 @@ export function Logo () {
         <View>
             <Text style={styles.title}>SEC PASS GENERATOR</Text>
             <Image source={imgLogo}
-            style={{resizeMode: 'contain', height: 320}}
+            style={{resizeMode: 'contain', height: 200}}
             />
         </View>
     )

@@ -4,8 +4,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#013464',
+  },
+  content: {
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingVertical: 40,
   },
   logoContainer: {
     flexDirection: 'column',
